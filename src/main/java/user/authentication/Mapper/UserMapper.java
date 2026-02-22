@@ -3,10 +3,12 @@ package user.authentication.Mapper;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;
-import user.authentication.dto.UserGetResponse;
-import user.authentication.dto.UserPostRequest;
-import user.authentication.dto.UserPostResponse;
-import user.authentication.dto.UserPutRequest;
+import user.authentication.dto.request.LoginRequest;
+import user.authentication.dto.response.LoginResponse;
+import user.authentication.dto.response.UserGetResponse;
+import user.authentication.dto.request.UserPostRequest;
+import user.authentication.dto.response.UserPostResponse;
+import user.authentication.dto.request.UserPutRequest;
 import user.authentication.entity.User;
 
 import java.util.List;
@@ -24,4 +26,7 @@ public interface UserMapper {
     UserGetResponse toUserGetResponse(User user);
 
     List<UserGetResponse> toUserGetResponseList(List<User> users);
+
+
+
 }

@@ -1,4 +1,4 @@
-package user.authentication.dto;
+package user.authentication.dto.response;
 
 public record UserGetResponse(
         Long id,

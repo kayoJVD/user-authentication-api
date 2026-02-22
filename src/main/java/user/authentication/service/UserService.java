@@ -17,6 +17,10 @@ public class UserService {
         return name == null ? repository.findAll() : repository.findByName(name);
     }
 
+    public List<User> findByEmail(String email) {
+        return email == null ? repository.findAll() : repository.findAllByEmail(email);
+    }
+
     public User save(User user) {
         return repository.save(user);
     }
@@ -26,8 +30,8 @@ public class UserService {
                 .orElseThrow(() -> new ResourceNotFoundException("User not Found"));
     }
 
-    public void delete(User user) {
-        findByIdOrThrowNotFound(user.getId());
+    public void delete(Long id) {
+        User user = findByIdOrThrowNotFound(id);
         repository.delete(user);
     }
 

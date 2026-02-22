@@ -1,4 +1,4 @@
-package user.authentication.dto;
+package user.authentication.dto.request;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Size;
